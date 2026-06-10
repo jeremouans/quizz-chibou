@@ -354,33 +354,31 @@ body{font-family:var(--fb);color:var(--text);background-color:var(--bg);
 const EXAMPLE = {
   title:"LE CHIBBOU QUIZ", theme:"casino",
   rounds:[
-    {name:"Un vrai pote le saurait !", sub:"Chib, si t'es un vrai pote, tu saurais ca .", color:1, points:1, questions:[
+    {name:"Un vrai pote le saurait !", sub:"Chib, si t'es un vrai pote, tu saurais ca. Si Chib connait la réponse, 1 point pour la personne concernée par la question.", color:1, points:1, questions:[
       {type:"qcm", q:"Lequel de ces prénoms chelou n'est PAS un frère de mathilde", options:["Odalric","Calixte","Tanguy","Martin"], correct:0, fun:"Aurais tu confondu avec ... Quentin ?"},
-      {type:"binary", q:"Combien de cœurs possède une pieuvre ?", options:["1 seul, comme nous","3 cœurs"], correct:1, fun:"Trois cœurs, neuf cerveaux et zéro problème de couple. La pieuvre nous nargue."},
+      {type:"qcm", q:"Lequel de ces prénoms chelou n'est PAS un frère de mathilde", options:["Odalric","Calixte","Tanguy","Martin"], correct:0, fun:"Aurais tu confondu avec ... Quentin ?"},
       {type:"binary", q:"Au 19e siècle, le ketchup était vendu comme…", options:["un médicament","un parfum"], correct:0, fun:"On le vendait en pilules contre les maux d'estomac. Le seul médoc qui va avec les frites."},
       {type:"binary", q:"La Tour Eiffel grandit en été.", options:["Vrai","Faux"], correct:0, fun:"Le métal se dilate : elle prend jusqu'à 15 cm l'été. Une vraie ado en pleine croissance."},
       {type:"binary", q:"Le miel finit toujours par périmer.", options:["Vrai","Faux"], correct:1, fun:"On a retrouvé du miel comestible dans des tombeaux égyptiens. Increvable."},
       {type:"binary", q:"En vrai, Napoléon était plutôt…", options:["minuscule","de taille normale"], correct:1, fun:"La légende du nabot vient d'une confusion d'unités. Sa taille, c'était surtout le caractère."}
     ]},
-    {name:"Le Plat du Jour", sub:"Culture générale maison. On crie, on parie, on assume.", color:0, points:2, questions:[
+    {name:"Chib, sa vie, son oeuvre.", sub:"Connaissez vous vraiment chib ? 1 point par bonne réponse.", color:0, points:1, questions:[
       {type:"open", q:"Quel est l'organe le plus lourd du corps humain ?", answer:"La peau", fun:"Eh oui, la peau est un organe — et le plus lourd. Tout le monde avait dit « le foie »."},
       {type:"open", q:"Quelle est la capitale de l'Australie ?", answer:"Canberra", fun:"Ni Sydney, ni Melbourne. Le piège classique qui fâche les familles."},
-      {type:"qcm", q:"Combien de fuseaux horaires couvre la France (outre-mer compris) ?", options:["3","7","12","9"], correct:2, fun:"Grâce à l'outre-mer, la France bat tout le monde. Pratique pour les excuses de retard."},
+      {type:"qcm", q:"Quelle était la race de Chib sur le jeu Starcraft 2", options:["Terran","Protoss","Zerg","Random"], correct:3, fun:"et oui...Sarah Kerrigan fut sa plus longue relation amoureuse."},
       {type:"open", q:"Quel animal a des empreintes digitales quasi identiques aux nôtres ?", answer:"Le koala", fun:"La police scientifique le sait : méfiez-vous des cambriolages mignons."},
       {type:"qcm", q:"Quel est le plat préféré de Garfield ?", options:["Les sushis","Les lasagnes","La pizza","Le couscous"], correct:1, fun:"Un chat qui déteste le lundi et adore les lasagnes. Le héros de la soirée."}
     ]},
-    {name:"Mazal Tov", sub:"La carte spéciale culture & humour yiddish. Lehaïm ! 🥂", color:2, points:2, questions:[
-      {type:"open", q:"Que veut dire l'expression « Mazel Tov » ?", answer:"Félicitations / bonne chance", fun:"Littéralement « bonne étoile ». À crier dès que quelqu'un casse un verre… ou rate une question."},
-      {type:"qcm", q:"Quel objet allume-t-on chaque soir pendant Hanouka ?", options:["La ménorah du Temple","La Hanoukia (9 branches)","Le shofar","La mezouza"], correct:1, fun:"9 branches : 8 jours + le « shamash » qui allume les autres."},
-      {type:"open", q:"Comment appelle-t-on le pain tressé du Shabbat ?", answer:"La Halla (Hallot)", fun:"Tressée, dorée, moelleuse. Le seul pain qui mérite une standing ovation le vendredi soir."},
-      {type:"qcm", q:"À quel âge un garçon célèbre-t-il sa Bar Mitsva ?", options:["10 ans","12 ans","13 ans","18 ans"], correct:2, fun:"13 ans : l'âge où l'on devient « responsable »… et où l'on récupère pas mal d'enveloppes."},
-      {type:"open", q:"En yiddish, un « schlemiel » c'est quelqu'un de…", answer:"Maladroit, gaffeur, qui a la poisse", fun:"Le schlemiel renverse la soupe… et le « schlimazel », c'est celui qui la reçoit dessus."}
+    {name:"Inside the Chibrain", sub:"Parmis ces propositions : que choisirait chib ?", color:2, points:1, questions:[
+      {type:"binary", q:"Son choix de vacances...", options:["Partir seul faire un road trip de 3 mois en Laponie","Rencontrer l'amour de sa vie dans un club med à Dubaï"], correct:1, fun:"Ca me désole qu'il ait choisis ça !"},
+      {type:"binary", q:"Son choix de vacances...", options:["Partir seul faire un road trip de 3 mois en Laponie","Rencontrer l'amour de sa vie dans un club med à Dubaï"], correct:1, fun:"Ca me désole qu'il ait choisis ça !"},
+
     ]},
-    {name:"L'Addition", sub:"Manche finale, points DOUBLÉS. C'est le moment de tout claquer.", color:3, points:4, questions:[
-      {type:"open", q:"Quel est le plus long mot « courant » de la langue française ?", answer:"Anticonstitutionnellement (25 lettres)", fun:"À ressortir en soirée pour clore tout débat de manière incompréhensible."},
-      {type:"qcm", q:"Quelle planète flotterait sur l'eau (si l'océan existait) ?", options:["Mars","Jupiter","Saturne","Neptune"], correct:2, fun:"Sa densité est plus faible que l'eau. Faudrait juste une baignoire de la taille d'une galaxie."},
-      {type:"open", q:"Combien de touches compte un piano classique ?", answer:"88", fun:"52 blanches + 36 noires. Et zéro excuse pour jouer faux désormais."},
-      {type:"qcm", q:"Quel pays est le plus peuplé du monde aujourd'hui ?", options:["La Chine","L'Inde","Les États-Unis","L'Indonésie"], correct:1, fun:"L'Inde a doublé la Chine en 2023."}
+    {name:"L'Elu de Chibou", sub:"Quel choix fera chib pour vous départager ?", color:3, points:1, questions:[
+      {type:"qcm", q:"Dans l'hypothèse improbable que Chib se marie, quel témoin choisirait-il ?", options:["Jerem, car c'est la tradition","Jean-Marie, sous la contrainte.","Benjas, pour organiser le cortège de moto","Romain, pour organiser le Kuduro"], correct:1, fun:"Oui, c'est moi qui ait choisit. "},
+     {type:"qcm", q:"Oh non, Chib a un chagrin d'amour... a qui se confie il ?", options:["Jihane, pour sa tendresse","Soumaya, pour l'éxpérience","Laeti, pour avoir le regarde de la jeunesse","So, pour la fougue"], correct:1, fun:" Faites pas attention, mon jeu me demande de choisir quelqu'un et flemme de recoder "},
+     {type:"qcm", q:"Oh non, Chib a un chagrin d'amour... a qui se confie il ?", options:["Jihane, pour sa tendresse","Soumaya, pour l'éxpérience","Laeti, pour avoir le regarde de la jeunesse","So, pour la fougue"], correct:1, fun:" Faites pas attention, mon jeu me demande de choisir quelqu'un et flemme de recoder "},
+
     ]}
   ]
 };
