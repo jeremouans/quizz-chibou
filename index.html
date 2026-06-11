@@ -242,7 +242,7 @@ body{font-family:var(--fb);color:var(--text);background-color:var(--bg);
   <!-- ================= ÉDITEUR ================= -->
   <section class="screen active" id="builder">
     <div class="b-head">
-      <input class="title-edit" id="gameTitle" maxlength="40" value="QUIZZ À EMPORTER">
+      <input class="title-edit" id="gameTitle" maxlength="40" value="LE CHIBBOU QUIZ">
       <div class="acts">
         <button class="btn ghost" id="saveBtn" title="Télécharger ton quizz">💾 Sauver</button>
         <button class="btn ghost" id="loadBtn" title="Charger un quizz">📂 Charger</button>
@@ -351,9 +351,7 @@ body{font-family:var(--fb);color:var(--text);background-color:var(--bg);
    CONTENU D'EXEMPLE (modifiable entièrement dans l'éditeur)
    color = index de couleur du thème (0 à 5)
    ============================================================ */
-const EXAMPLE = 
-
-{
+const EXAMPLE = {
   "title": "LE CHIBBOU QUIZ",
   "theme": "casino",
   "rounds": [
@@ -363,13 +361,90 @@ const EXAMPLE =
       "color": 1,
       "points": 1,
       "questions": [
-        {"type": "qcm", "q": "Lequel de ces prénoms chelou n'est PAS un frère de mathilde", "options": ["Odalric", "Calixte", "Tanguy", "Martin"], "correct": 0, "fun": "Aurais tu confondu avec ... Quentin ?"},
-        {"type": "qcm", "q": "Quel est l'age du grand-père de Jean-Marie ?", "options": ["101", "102", "100", "103"], "correct": 0, "fun": "Il était pote avec de Gaulle"},
-        {"type": "qcm", "q": "Comment s'appellent les enfants de Romain ?", "options": ["Mael et Eden", "Christiano et Joao", "Gael et Enzo", "Theo et Chris"], "correct": 0, "fun": "Vous le saviez, c'est bien."},
-        {"type": "qcm", "q": "Quel est le nom de famille de Ryan", "options": ["Brousseau, depuis peu", "N'guyen", "Tran", "Duong"], "correct": 1, "fun": "Vous le saviez, c'est bien."},
-        {"type": "qcm", "q": "Quel est le nom de famille de la fille de So ?", "options": ["Brousseau, depuis peu", "N'guyen", "Tran", "Duong"], "correct": 1, "fun": "Vous le saviez, c'est bien."},
-        {"type": "qcm", "q": "Quel est le prénom du petit frère de Soumaya ?", "options": ["Mohammed", "Oussama", "Karim", "Jean-François"], "correct": 1, "fun": "Vous le saviez, c'est bien."},
-        {"type": "qcm", "q": "Quel est le prénom de la grande soeur de Jihane ?", "options": ["Latifa", "Sarra", "Imane", "Rachida"], "correct": 2, "fun": "Vous le saviez, c'est bien."}
+        {
+          "type": "qcm",
+          "q": "Lequel de ces prénoms chelou n'est PAS un frère de mathilde",
+          "options": [
+            "Odalric",
+            "Calixte",
+            "Tanguy",
+            "Martin"
+          ],
+          "correct": 0,
+          "fun": "Aurais tu confondu avec ... Quentin ?"
+        },
+        {
+          "type": "qcm",
+          "q": "Quel est l'age du grand-père de Jean-Marie ?",
+          "options": [
+            "101",
+            "102",
+            "100",
+            "103"
+          ],
+          "correct": 0,
+          "fun": "Il était pote avec de Gaulle"
+        },
+        {
+          "type": "qcm",
+          "q": "Comment s'appellent les enfants de Romain ?",
+          "options": [
+            "Mael et Eden",
+            "Christiano et Joao",
+            "Gael et Enzo",
+            "Theo et Chris"
+          ],
+          "correct": 0,
+          "fun": "Vous le saviez, c'est bien."
+        },
+        {
+          "type": "qcm",
+          "q": "Quel est le nom de famille de Ryan",
+          "options": [
+            "Brousseau, depuis peu",
+            "N'guyen",
+            "Tran",
+            "Duong"
+          ],
+          "correct": 1,
+          "fun": "Vous le saviez, c'est bien."
+        },
+        {
+          "type": "qcm",
+          "q": "Quel est le nom de famille de la fille de So ?",
+          "options": [
+            "Brousseau, depuis peu",
+            "N'guyen",
+            "Tran",
+            "Duong"
+          ],
+          "correct": 1,
+          "fun": "Vous le saviez, c'est bien."
+        },
+        {
+          "type": "qcm",
+          "q": "Quel est le prénom du petit frère de Soumaya ?",
+          "options": [
+            "Mohammed",
+            "Oussama",
+            "Karim",
+            "Jean-François"
+          ],
+          "correct": 1,
+          "fun": "Vous le saviez, c'est bien."
+        },
+        {
+          "type": "qcm",
+          "q": "Quel est le prénom de la grande soeur de Jihane ?",
+          "options": [
+            "Latifa",
+            "Sarra",
+            "Imane",
+            "Rachida"
+          ],
+          "correct": 2,
+          "fun": "Vous le saviez, c'est bien."
+        }
       ]
     },
     {
@@ -378,13 +453,84 @@ const EXAMPLE =
       "color": 0,
       "points": 1,
       "questions": [
-        {"type": "qcm", "q": "Quelle est le prénom du Frère de Chib ?", "options": ["Alexandre", "Benoit", "Jordan", "Thierry"], "correct": 0, "fun": "Bon, vu que je suis pas sur, j'ai mis ca."},
-        {"type": "qcm", "q": "De quelle village est originaire Chib ?", "options": ["La BRED", "La Brède", "La Breizh", "La Braide"], "correct": 1, "fun": "Bon, c'était facile."},
-        {"type": "qcm", "q": "Sur le jeu Starcraft 2, quelle est sa race", "options": ["Zerg", "Protoss", "Terran", "Random"], "correct": 0, "fun": "et oui...Sarah Kerrigan fut sa plus longue relation amoureuse."},
-        {"type": "qcm", "q": "Que représentait le premier dessin de chib, lors de sa célèbre crise de la quarantaine ou il a tout quitté pour devenir artiste ?", "options": ["Une moto japonaise", "Un portrait d'une statue grecque", "Une femme nue", "Un pot de fleur"], "correct": 1, "fun": "Tres beau dessins"},
-        {"type": "qcm", "q": "Dans laquelle de ces entreprise Chibou n'a JAMAIS travaillé ?", "options": ["Leyton", "Thales", "Alten", "PWC"], "correct": 3, "fun": "Vous l'aviez ? ca sert a rien mais ca fait un point."},
-        {"type": "open", "q": "Combien pèse chib, avec les habits ? Le plus proche gagne", "answer": "On vérifie de suite", "fun": "Attention aux coups de vents"},
-        {"type": "qcm", "q": "Quelle est la marque de la moto de chib ", "options": ["Yamaha", "Kawasaki", "Triumph", "Suzuki"], "correct": 0, "fun": "Vous le saviez, c'est bien."}
+        {
+          "type": "qcm",
+          "q": "Quelle est le prénom du Frère de Chib ?",
+          "options": [
+            "Alexandre",
+            "Benoit",
+            "Jordan",
+            "Thierry"
+          ],
+          "correct": 0,
+          "fun": "Bon, vu que je suis pas sur, j'ai mis ca."
+        },
+        {
+          "type": "qcm",
+          "q": "De quelle village est originaire Chib ?",
+          "options": [
+            "La BRED",
+            "La Brède",
+            "La Breizh",
+            "La Braide"
+          ],
+          "correct": 1,
+          "fun": "Bon, c'était facile."
+        },
+        {
+          "type": "qcm",
+          "q": "Sur le jeu Starcraft 2, quelle est sa race",
+          "options": [
+            "Zerg",
+            "Protoss",
+            "Terran",
+            "Random"
+          ],
+          "correct": 0,
+          "fun": "et oui...Sarah Kerrigan fut sa plus longue relation amoureuse."
+        },
+        {
+          "type": "qcm",
+          "q": "Que représentait le premier dessin de chib, lors de sa célèbre crise de la quarantaine ou il a tout quitté pour devenir artiste ?",
+          "options": [
+            "Une moto japonaise",
+            "Un portrait d'une statue grecque",
+            "Une femme nue",
+            "Un pot de fleur"
+          ],
+          "correct": 1,
+          "fun": "Tres beau dessins"
+        },
+        {
+          "type": "qcm",
+          "q": "Dans laquelle de ces entreprise Chibou n'a JAMAIS travaillé ?",
+          "options": [
+            "Leyton",
+            "Thales",
+            "Alten",
+            "PWC"
+          ],
+          "correct": 3,
+          "fun": "Vous l'aviez ? ca sert a rien mais ca fait un point."
+        },
+        {
+          "type": "open",
+          "q": "Combien pèse chib, avec les habits ? Le plus proche gagne",
+          "answer": "On vérifie de suite",
+          "fun": "Attention aux coups de vents"
+        },
+        {
+          "type": "qcm",
+          "q": "Quelle est la marque de la moto de chib ",
+          "options": [
+            "Yamaha",
+            "Kawasaki",
+            "Triumph",
+            "Suzuki"
+          ],
+          "correct": 0,
+          "fun": "Vous le saviez, c'est bien."
+        }
       ]
     },
     {
@@ -393,14 +539,86 @@ const EXAMPLE =
       "color": 2,
       "points": 1,
       "questions": [
-        {"type": "binary", "q": "Son choix de vacances...", "options": ["Partir seul faire un road trip de 3 mois en Laponie", "Rencontrer l'amour de sa vie dans un club med à Dubaï"], "correct": 1, "fun": "Ca me désole qu'il ait choisis ça !"},
-        {"type": "binary", "q": "Une vie entière sans...", "options": ["Téléphone", "Papier toilette"], "correct": 1, "fun": "Bon je dois écrire des trucs ici."},
-        {"type": "binary", "q": "Sa pire nuit", "options": ["A coté de Jerem qui ronfle", "A coté de Vinz & Laeti qui copulent"], "correct": 1, "fun": "Bon je dois écrire des trucs ici."},
-        {"type": "binary", "q": "Son excuse pour pas venir", "options": ["Je suis malade en ce moment", "Je dois finir un dessin"], "correct": 1, "fun": "Bon je dois écrire des trucs ici."},
-        {"type": "binary", "q": "Dans le train", "options": ["A coté de 3 mioches qui hurlent", "A coté d'un homme qui pue la transpi et l'alcool"], "correct": 1, "fun": "Bon je dois écrire des trucs ici."},
-        {"type": "binary", "q": "Quel est le pire ? Le boss arrive et dit à Chib :", "options": ["Je vous présente votre nouveau Senior Manager : Guillaume Verlaine", "Je vous présente notre nouvelle RH : Claire"], "correct": 0, "fun": "La G4 est de retour."},
-        {"type": "binary", "q": "Un hacker russe a trouvé le disque dur de Chib et menace de tout divulguer si Chib ne paye pas", "options": ["Il paye, le monde ne veut pas découvrir ses secrets", "Rien à cacher, je ne négocie pas avec les terroriste"], "correct": 0, "fun": "Si la réponse est : ca dépénd combien, alors ca veut dire qu'il paye."},
-        {"type": "binary", "q": "La pire ambiance", "options": ["17 h de GSM band en continu dans un bus", "Benjas qui raconte une histoire sans fin"], "correct": 0, "fun": "Et tout de suite, Despacito en GSM band..."}
+        {
+          "type": "binary",
+          "q": "Son choix de vacances...",
+          "options": [
+            "Partir seul faire un road trip de 3 mois en Laponie",
+            "Rencontrer l'amour de sa vie dans un club med à Dubaï"
+          ],
+          "correct": 1,
+          "fun": "Ca me désole qu'il ait choisis ça !"
+        },
+        {
+          "type": "binary",
+          "q": "Une vie entière sans...",
+          "options": [
+            "Téléphone",
+            "Papier toilette"
+          ],
+          "correct": 1,
+          "fun": "Bon je dois écrire des trucs ici."
+        },
+        {
+          "type": "binary",
+          "q": "Sa pire nuit",
+          "options": [
+            "A coté de Jerem qui ronfle",
+            "A coté de Vinz & Laeti qui copulent"
+          ],
+          "correct": 1,
+          "fun": "Bon je dois écrire des trucs ici."
+        },
+        {
+          "type": "binary",
+          "q": "Son excuse pour pas venir",
+          "options": [
+            "Je suis malade en ce moment",
+            "Je dois finir un dessin"
+          ],
+          "correct": 1,
+          "fun": "Bon je dois écrire des trucs ici."
+        },
+        {
+          "type": "binary",
+          "q": "Dans le train",
+          "options": [
+            "A coté de 3 mioches qui hurlent",
+            "A coté d'un homme qui pue la transpi et l'alcool"
+          ],
+          "correct": 1,
+          "fun": "Bon je dois écrire des trucs ici."
+        },
+        {
+          "type": "binary",
+          "q": "Quel est le pire ? Le boss arrive et dit à Chib :",
+          "options": [
+            "Je vous présente votre nouveau Senior Manager : Guillaume Verlaine",
+            "Je vous présente notre nouvelle RH : Claire"
+          ],
+          "correct": 0,
+          "fun": "La G4 est de retour."
+        },
+        {
+          "type": "binary",
+          "q": "Un hacker russe a trouvé le disque dur de Chib et menace de tout divulguer si Chib ne paye pas",
+          "options": [
+            "Il paye, le monde ne veut pas découvrir ses secrets",
+            "Rien à cacher, je ne négocie pas avec les terroriste"
+          ],
+          "correct": 0,
+          "fun": "Si la réponse est : ca dépénd combien, alors ca veut dire qu'il paye."
+        },
+        {
+          "type": "binary",
+          "q": "La pire ambiance",
+          "options": [
+            "17 h de GSM band en continu dans un bus",
+            "Benjas qui raconte une histoire sans fin"
+          ],
+          "correct": 0,
+          "fun": "Et tout de suite, Despacito en GSM band..."
+        }
       ]
     },
     {
@@ -409,11 +627,66 @@ const EXAMPLE =
       "color": 3,
       "points": 2,
       "questions": [
-        {"type": "qcm", "q": "Dans l'hypothèse improbable que Chib se marie, quel témoin choisirait-il ?", "options": ["Jerem, car c'est la tradition", "Jean-Marie, sous la contrainte.", "Benjas, pour organiser le cortège de moto", "Arnaud, car il est américain"], "correct": 1, "fun": "Oui, c'est moi qui ait choisit. "},
-        {"type": "qcm", "q": "Oh non, Chib a un chagrin d'amour... a qui se confie il ?", "options": ["Jihane, pour sa tendresse", "Soumaya, pour l'éxpérience", "Laeti, pour avoir le regard de la jeunesse", "So, pour la fougue"], "correct": 2, "fun": " Faites pas attention, mon jeu me demande de choisir quelqu'un et flemme de recoder "},
-        {"type": "qcm", "q": "Chib tombe en panne sur l'autoroute... il Appelle qui ?", "options": ["Benjas, car c'est mon gars sur", "Romain, car il est portugais", "Jean-marie, meme si il a oublié son permis", "Jerem, car il a un beau frere garagiste"], "correct": 3, "fun": " Faites pas attention, mon jeu me demande de choisir quelqu'un et flemme de recoder "},
-        {"type": "qcm", "q": "Chib par en vacances, qui compte t'il en premier ?", "options": ["Vincent", "Jean-Marie", "Arnaud", "Sophia"], "correct": 3, "fun": " Faites pas attention, mon jeu me demande de choisir quelqu'un et flemme de recoder "},
-        {"type": "qcm", "q": "Chib doit ?", "options": ["Vincent", "Jean-Marie", "Arnaud", "Sophia"], "correct": 3, "fun": " Faites pas attention, mon jeu me demande de choisir quelqu'un et flemme de recoder "}
+        {
+          "type": "qcm",
+          "q": "Dans l'hypothèse improbable que Chib se marie, quel témoin choisirait-il ?",
+          "options": [
+            "Jerem, car c'est la tradition",
+            "Jean-Marie, sous la contrainte.",
+            "Benjas, pour organiser le cortège de moto",
+            "Arnaud, car il est américain"
+          ],
+          "correct": 1,
+          "fun": "Oui, c'est moi qui ait choisit. "
+        },
+        {
+          "type": "qcm",
+          "q": "Oh non, Chib a un chagrin d'amour... a qui se confie il ?",
+          "options": [
+            "Jihane, pour sa tendresse",
+            "Soumaya, pour l'éxpérience",
+            "Laeti, pour avoir le regard de la jeunesse",
+            "So, pour la fougue"
+          ],
+          "correct": 2,
+          "fun": " Faites pas attention, mon jeu me demande de choisir quelqu'un et flemme de recoder "
+        },
+        {
+          "type": "qcm",
+          "q": "Chib tombe en panne sur l'autoroute... il Appelle qui ?",
+          "options": [
+            "Benjas, car c'est mon gars sur",
+            "Romain, car il est portugais",
+            "Jean-marie, meme si il a oublié son permis",
+            "Jerem, car il a un beau frere garagiste"
+          ],
+          "correct": 3,
+          "fun": " Faites pas attention, mon jeu me demande de choisir quelqu'un et flemme de recoder "
+        },
+        {
+          "type": "qcm",
+          "q": "Chib par en vacances, qui compte t'il en premier ?",
+          "options": [
+            "Vincent",
+            "Jean-Marie",
+            "Arnaud",
+            "Sophia"
+          ],
+          "correct": 3,
+          "fun": " Faites pas attention, mon jeu me demande de choisir quelqu'un et flemme de recoder "
+        },
+        {
+          "type": "qcm",
+          "q": "Chib doit ?",
+          "options": [
+            "Vincent",
+            "Jean-Marie",
+            "Arnaud",
+            "Sophia"
+          ],
+          "correct": 3,
+          "fun": " Faites pas attention, mon jeu me demande de choisir quelqu'un et flemme de recoder "
+        }
       ]
     }
   ]
